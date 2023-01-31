@@ -418,15 +418,16 @@ Boolean, true if ckecked - false if unchecked.
 ## Channels Select
 
 ```js
-DBD.formTypes.channelsSelect(disabled, channelTypes = ['GUILD_TEXT'], hideNSW, onlyNSFW),
+DBD.formTypes.channelsSelect(disabled, channelTypes = ['GUILD_TEXT'], hideNSW, onlyNSFW, hideNoAccess),
 ```
 
-| Argument     | Type    |                                                                          |
-|--------------|---------|--------------------------------------------------------------------------|
-| disabled     | Boolean | Boolean check for if the channels select should be disabled or not.      |
-| channelTypes | Array   | An Array (!) of types of channels to be included in the channels select. |
-| hideNSFW     | Boolean | Hide channels that are marked as nsfw                                    |
-| onlyNSFW     | Boolean | Only Show channels that are marked as nsfw                               |
+| Argument      | Type    |                                                                          |
+|---------------|---------|--------------------------------------------------------------------------|
+| disabled      | Boolean | Boolean check for if the channels select should be disabled or not.      |
+| channelTypes  | Array   | An Array (!) of types of channels to be included in the channels select. |
+| hideNSFW      | Boolean | Hide channels that are marked as nsfw                                    |
+| onlyNSFW      | Boolean | Only Show channels that are marked as nsfw                               |
+| hideNoAccess  | Boolean | Hide channels the user and bot do not have access to                     |
 
 ### Data required for `getActualSet` function
 
@@ -458,16 +459,18 @@ String, channel ID | or null.
 ## Channels Multi Select
 
 ```js
-DBD.formTypes.channelsMultiSelect(disabled, required, channelTypes = ['GUILD_TEXT'], hideNSW, onlyNSFW),
+DBD.formTypes.channelsMultiSelect(disabled, required, channelTypes = ['GUILD_TEXT'], hideNSW, onlyNSFW, hideNoAccess),
 ```
 
-| Argument     | Type    |                                                                                   |
-|--------------|---------|-----------------------------------------------------------------------------------|
-| disabled     | Boolean | Boolean check for if the multiple channels select should be disabled or not.      |
-| required     | Boolean | Boolean check for if the multiple channels select should be required or not.      |
-| channelTypes | Array   | An Array (!) of types of channels to be included in the multiple channels select. |
-| hideNSFW     | Boolean | Hide channels that are marked as nsfw                                             |
-| onlyNSFW     | Boolean | Only Show channels that are marked as nsfw                                        |
+| Argument      | Type    |                                                                                   |
+|---------------|---------|-----------------------------------------------------------------------------------|
+| disabled      | Boolean | Boolean check for if the multiple channels select should be disabled or not.      |
+| required      | Boolean | Boolean check for if the multiple channels select should be required or not.      |
+| channelTypes  | Array   | An Array (!) of types of channels to be included in the multiple channels select. |
+| hideNSFW      | Boolean | Hide channels that are marked as nsfw                                             |
+| onlyNSFW      | Boolean | Only Show channels that are marked as nsfw                                        |
+| hideNoAccess  | Boolean | Hide channels the user and bot do not have access to                              |
+
 
 ### Data required for `getActualSet` function
 
@@ -483,13 +486,14 @@ Array of Strings (Channels IDs) | or an empty Array.
 ## Roles Select
 
 ```js
-DBD.formTypes.rolesSelect(disabled, includeBots),
+DBD.formTypes.rolesSelect(disabled, includeBots, hideHigherRoles),
 ```
 
-| Argument     | Type    |                                                                  |
-|--------------|---------|------------------------------------------------------------------|
-| disabled     | Boolean | Boolean check for if the roles select should be disabled or not. |
-| includeBots     | Boolean | Boolean include bot roles.                                    |
+| Argument        | Type    |                                                                            |
+|-----------------|---------|----------------------------------------------------------------------------|
+| disabled        | Boolean | Boolean check for if the roles select should be disabled or not.           |
+| includeBots     | Boolean | Boolean include bot roles.                                                 |
+| hideHigherRoles | Boolean | Hide roles that are positioned higher than the users and bots highest role |
 
 ### Data required for `getActualSet` function
 
@@ -521,14 +525,16 @@ String, role ID | or null.
 ## Roles Multi Select
 
 ```js
-DBD.formTypes.rolesMultiSelect(disabled, required, includeBots),
+DBD.formTypes.rolesMultiSelect(disabled, required, includeBots, hideHigherRoles),
 ```
 
-| Argument     | Type    |                                                                           |
-|--------------|---------|---------------------------------------------------------------------------|
-| disabled     | Boolean | Boolean check for if the multiple roles select should be disabled or not. |
-| required     | Boolean | Boolean check for if the multiple roles select should be required or not. |
-| includeBots     | Boolean | Boolean include bot roles.                                             |
+| Argument        | Type    |                                                                            |
+|-----------------|---------|----------------------------------------------------------------------------|
+| disabled        | Boolean | Boolean check for if the multiple roles select should be disabled or not.  |
+| required        | Boolean | Boolean check for if the multiple roles select should be required or not.  |
+| includeBots     | Boolean | Boolean include bot roles.                                                 |
+| hideHigherRoles | Boolean | Hide roles that are positioned higher than the users and bots highest role |
+
 
 ### Data required for `getActualSet` function
 
