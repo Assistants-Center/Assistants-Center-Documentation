@@ -33,6 +33,7 @@ settings: [
         .setName("Setup") // Name of the category
         .setDescription("Setup your bot with default settings!") // Description of the category
         .setToggleable(true) // Sets the category to be toggleable
+        .setImage("https://assistantscenter.com/api/user/avatar/63ad65e2d3f1b1b3acdff794")
         .addOptions(
             new Option() // Creates a new option inside the category
                 .setId('lang') // Sets the id of the option - must be unique
