@@ -8,4 +8,4 @@ Discord-Dashboard is a module that allows you to create a simple Dashboard for t
 
 We welcome your interest in the project!
 
-[Looking for v3 Documentation?](https://docs.assistantscenter.com/discord-dashboard/v3)
+<!-- [Looking for v3 Documentation?](https://docs.assistantscenter.com/discord-dashboard/v3) -->
