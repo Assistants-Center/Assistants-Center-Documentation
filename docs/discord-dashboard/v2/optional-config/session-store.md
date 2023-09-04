@@ -10,7 +10,7 @@
 - The easiest module however would be `connect-mongo`, here is an example below:
 
 ```js
-const ConnectMongo = require('connect-mongo')
+const MongoStore = require('connect-mongo')
 
 const Dashboard = new DBD.Dashboard({
     ...
