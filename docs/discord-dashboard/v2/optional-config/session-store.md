@@ -9,7 +9,7 @@
 - `ExpressSessionStoreModule` - Express.js session store module, for example 'session-file-store', or 'connect-mongodb-session', etc.
 - The easiest module however would be `connect-mongo`, here is an example below:
 
-  ```js
+```js
 const ConnectMongo = require('connect-mongo')
 
 const Dashboard = new DBD.Dashboard({
