@@ -2,7 +2,7 @@
 
 ```js
 ...
-    sessionStore: <ExpressSessionStoreModule>,
+    sessionSaveSession: <ExpressSessionStoreModule>,
 ...
 ```
 
